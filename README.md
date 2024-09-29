@@ -1,2 +1,2 @@
-# dbd24_demo_library-main
-Proyecto de Diseño de Base de Datos
+# dbd23_demo_library
+Demo de muestra para curso DBD 23
