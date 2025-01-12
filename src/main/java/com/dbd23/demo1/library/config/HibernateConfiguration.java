@@ -14,7 +14,11 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 public class HibernateConfiguration {
-
+    /**
+     * Configura el objeto que nos va a permitir a traves del patron factory construir sesiones de la BD
+     *  para guardar
+     * o recuperar informacion
+     */
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
@@ -26,7 +30,7 @@ public class HibernateConfiguration {
     }
 
     /**
-     * Configura el objeto que utiliza Hibernate para a
+     * Configura el objeto que utiliza Hibernate para utilizar una determinada BD
      */
     @Bean
     public DataSource dataSource() {
@@ -34,7 +38,7 @@ public class HibernateConfiguration {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/library_bd");
         dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setPassword("219001");
         return dataSource;
     }
 

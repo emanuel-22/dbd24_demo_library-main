@@ -9,9 +9,18 @@ import java.util.List;
 @Entity
 @Table(name = "author")
 public class Author {
-
+    /* Id permite manejar desde el objeto, genero con identity que es la mas comun*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    /* Son reglas o restricciones las qe estan a continuaciòn
+    * Si no tuviera column, automáticamente hibernate toma a los atributos
+    * como columnas de una tabla, se mapea los atributos a columna de la BD por defecto
+    * @Transient es la forma para obviar un atributo.
+    * Es decir para indicar que no se lleve a una columna de la BD,
+    * porque el mapeo es por alcance.
+     */
+
     @Column(name = "id_author")
     Long id;
 

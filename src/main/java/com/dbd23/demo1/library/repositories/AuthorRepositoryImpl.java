@@ -13,7 +13,8 @@ import java.util.Optional;
 
 @Repository
 public class AuthorRepositoryImpl implements AuthorRepository{
-
+    /* Autowired es la notacion contraria al Bean donde digo inyectame una sessionfactory
+    para que pueda usar una session */
     @Autowired
     private SessionFactory sessionFactory;
 

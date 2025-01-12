@@ -27,6 +27,7 @@ public abstract class Book {
     @Column(length = 255)
     private String comments;
 
+    // En vez de EAGER puede ser LAZY que dice recuperemos el libro y no el autor a menos que te pida
     @ManyToOne(fetch = FetchType.EAGER, cascade = {})
     @JoinColumn(name = "id_author", nullable = false)
     private Author author;
